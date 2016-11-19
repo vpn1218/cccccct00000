@@ -3,9 +3,26 @@
 ----- 
   默认安装模块  core,ctype,date,dom,ereg,fileinfo,filter,hash,iconv,json,libxml,pcre,pdo,pdo_sql_slite,phar,posix,Reflection,session,simplexml,spl,sqlite,sqlite3,standard,tokenizer,xml,xmlreader,xmlwriter.
   
-> yum -y install bzip2-devel libcurl-devel enchant-devel t1lib-devel gmp-devel uw-imap-devel.x86_64  firebird-devel libicu-devel openldap-devel libmcrypt-devel unixODBC-devel  postgresql-devel
-  
-./configure --prefix=/usr/local/php5329 --enable-fpm --with-config-file-path=/usr/local/php5329/conf  --with-config-file-scan-dir=/usr/local/php5329/conf.d   --with-openssl  --with-zlib --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-curlwrappers --enable-dba --with-enchant --enable-exif --enable-ftp --with-gd --with-jpeg-dir --with-freetype-dir --with-t1lib --enable-gd-native-ttf --with-png-dir --with-xpm-dir  --enable-gd-jis-conv --with-libdir=lib64 --with-gettext --with-gmp --with-mhash --with-imap --with-kerberos --with-imap-ssl --with-interbase --enable-intl --with-icu-dir=/usr --enable-mbstring --with-ldap --with-ldap-sasl --with-libmbfl --with-onig --with-mcrypt  --with-sapdb   --with-solid --with-ibm-db2 --with-empress --with-empress-bcs --with-birdstep  --with-unixODBC=/usr 
+> yum -y install bzip2-devel libcurl-devel enchant-devel t1lib-devel gmp-devel uw-imap-devel.x86_64  firebird-devel libicu-devel openldap-devel libmcrypt-devel unixODBC-devel  #postgresql-devel（7.4） net-snmp-devel
+
+
+./configure --prefix=/usr/local/php5329 --enable-fpm --with-config-file-path=/usr/local/php5329/conf  --with-config-file-scan-dir=/usr/local/php5329/conf.d   --with-openssl  --with-zlib --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-curlwrappers --enable-dba --with-enchant --enable-exif --enable-ftp --with-gd --with-jpeg-dir --with-freetype-dir --with-t1lib --enable-gd-native-ttf --with-png-dir --with-xpm-dir  --enable-gd-jis-conv --with-libdir=lib64 --with-gettext --with-gmp --with-mhash --with-imap --with-kerberos --with-imap-ssl --with-interbase --enable-intl --with-icu-dir=/usr --enable-mbstring --with-ldap --with-ldap-sasl --with-libmbfl --with-onig --with-mcrypt  --with-sapdb --with-pdo-firebird --with-mysql=mysqlnd --with-mysql-sock=/tmp/mysql.sock --with-mysqli=mysqlnd --with-zlib-dir --enable-shmop --enable-soap --enable-sockets  --enable-sqlite-utf8 --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-wddx --with-xsl --enable-zip --enable-mysqlnd   --enable-zend-multibyte --enable-fast-install
+
+Notice: Following unknown configure options were used:
+
+--with-solid
+--with-ibm-db2
+--with-empress
+--with-empress-bcs
+--with-birdstep
+--with-unixODBC=/usr
+--with-solid
+--with-ibm-db2
+--with-empress
+--with-empress-bcs
+--with-birdstep
+--with-unixODBC=/usr
+
 
 
 ####添加命令行参数 ：
