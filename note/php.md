@@ -34,5 +34,18 @@ export PATH
 最后：执行 命令source /etc/profile或 执行点命令 ./profile使其修改生效，执行完可通过echo $PATH命令查看是否添加成功
 
 
+####安装xcache
+/usr/local/php5329/bin/phpize
+
+./configure --enable-xcache --enable-xcache-constant --with-php-config=/usr/local/php5329/bin/php-config --enable-xcache-optimizer --enable-xcache-coverager --enable-xcache-assembler  --enable-xcache-disassembler --enable-xcache-encoder --enable-xcache-decoder --enable-xcache-test --enable-xcache-dprint --enable-shared=PKGS --enable-fast-install=PKGS 
+
+####安装memcached扩展
+
+yum -y install libevent-devel
+
+./configure --enable-memcached  --enable-memcached-json   --enable-memcached-protocol --enable-shared=PKGS --enable-fast-install=PKGS --with-php-config=/usr/local/php5329/bin/php-config --with-libmemcached-dir
+
+
+
 
 
