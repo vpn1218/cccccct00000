@@ -1,20 +1,18 @@
-#### 安装php5.6.28 
-
-##### 最小项安装
-  ` ./configure --prefix=/usr/local/php5628 --enable-fpm`
-
+#### 安装php7.0.9
+##### 最小化安装php7.0.9
+    >./configure --prefix=/usr/local/php709 --enable-fpm
 ---
->     默认安装的模块 ：cgi-fcgi，Core，ctype，date，dom，ereg，fileinfo，filter，hash，iconv，json，libxml，pcre，PDO，pdo_sqlite，Phar，posix，Reflection，session，SimpleXML，SPL，sqlite3，standard，tokenizer，xml，xmlreader，xmlwriter，Additional Modules
+>     默认安装的模块 cgi-fcg,Core,ctype,date,dom,fileinfo,filter,hash,iconv,json,libxml,pcre,PDO,pdo_sqlite,Phar,posix,Reflection,session,SimpleXML,SPL,sqlite3,standard,tokenizer,xml,xmlreader,xmlwriter,Additional Modules,Environment
 
----
 
-##### 较详细版安装
+> yum -y install libwebp-devel
 
+#####详细安装
 >     ./configure  \
->      --prefix=/usr/local/php5628 \
+>     --prefix=/usr/local/php709 \
 >     --enable-fpm \
->     --with-config-file-path=/usr/local/php5628/conf \
->     --with-config-file-scan-dir=/usr/local/php5628/conf.d \
+>     --with-config-file-path=/usr/local/php709/conf \
+>     --with-config-file-scan-dir=/usr/local/php709/conf.d \
 >     --with-openssl \
 >     --with-zlib \
 >     --enable-bcmath \
@@ -68,14 +66,10 @@
 >     --enable-opcache \
 >     --with-fpm-acl \
 >     --enable-phpdbg \
->     --with-system-ciphers
-----
+>     --enable-phpdbg-webhelper \
+>     --with-system-ciphers \
+>     --with-webp-dir \
 
->NOTE     unrecognized options: --with-gettext--with-gmp
-
-
-
+>NOTE configure: WARNING: unrecognized options: --with-t1lib, --with-gettext--with-gmp, --with-mysql, --with-mssql, --with-vpx-dir
 
 
-  
-  

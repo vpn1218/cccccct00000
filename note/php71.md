@@ -1,20 +1,17 @@
-#### 安装php5.6.28 
-
-##### 最小项安装
-  ` ./configure --prefix=/usr/local/php5628 --enable-fpm`
-
----
->     默认安装的模块 ：cgi-fcgi，Core，ctype，date，dom，ereg，fileinfo，filter，hash，iconv，json，libxml，pcre，PDO，pdo_sqlite，Phar，posix，Reflection，session，SimpleXML，SPL，sqlite3，standard，tokenizer，xml，xmlreader，xmlwriter，Additional Modules
+#### 安装php7.1.0rc6
+##### 最小化安装php7.1.0rc6
+    > ./configure --prefix=/usr/local/php710 --enable-fpm
 
 ---
+>     默认安装的模块 cgi-fcgi,Core,ctype,date,dom,fileinfo,filter,hash,iconv,json,libxml,pcre,PDO,pdo_sqlite,Phar,posix,Reflection,session,SimpleXML,SPL,sqlite3,standard,tokenizer,xml,xmlreader,xmlwriter
 
-##### 较详细版安装
+####详细安装
 
 >     ./configure  \
->      --prefix=/usr/local/php5628 \
+>     --prefix=/usr/local/php710 \
 >     --enable-fpm \
->     --with-config-file-path=/usr/local/php5628/conf \
->     --with-config-file-scan-dir=/usr/local/php5628/conf.d \
+>     --with-config-file-path=/usr/local/php710/conf \
+>     --with-config-file-scan-dir=/usr/local/php710/conf.d \
 >     --with-openssl \
 >     --with-zlib \
 >     --enable-bcmath \
@@ -27,14 +24,11 @@
 >     --with-gd \
 >     --with-jpeg-dir \
 >     --with-freetype-dir \
->     --with-t1lib \
 >     --enable-gd-native-ttf \
 >     --with-png-dir \
 >     --with-xpm-dir \
 >     --enable-gd-jis-conv \
 >     --with-libdir=lib64 \
->     --with-gettext\
->     --with-gmp \
 >     --with-mhash \
 >     --with-imap \
 >     --with-kerberos \
@@ -61,21 +55,11 @@
 >     --with-pdo-mysql=mysqlnd \
 >     --enable-embedded-mysqli \
 >     --with-mysqli=mysqlnd \
->     --with-mysql=mysqlnd \
->     --with-mssql \
 >     --enable-dtrace \
->     --with-vpx-dir \
 >     --enable-opcache \
 >     --with-fpm-acl \
 >     --enable-phpdbg \
->     --with-system-ciphers
-----
-
->NOTE     unrecognized options: --with-gettext--with-gmp
-
-
-
-
-
-  
-  
+>     --enable-phpdbg-webhelper \
+>     --with-system-ciphers \
+>     --with-webp-dir \
+>     --with-pcre-jit \
