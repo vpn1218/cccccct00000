@@ -17,82 +17,86 @@
 
 >数据库表是一系列二维数组的集合
 
-* 字段field 属性attribute
-数据库系统的主要组成部分
+>*字段field 属性attribute
+
+#### 数据库系统的主要组成部分
 数据库：用于存储数据的地方
 数据库管理系统：用于管理数据库的软件
 数据库应用程序：提高数据库处理能力所使用的管理数据的软件补充。
-SQL语言
-SQL语言包含4部分
+# SQL语言
+#### SQL语言包含4部分
 
-数据定义语言（DDL）：drop create alter
-数据操作语言（DML）：insert update delete 。。
-数据查询语言（DQL）：select
-数据控制语言（DCL）：grant revoke commit rollback。。
-数据库访问接口
-ODBC open database connectivity 开放数据库互联
-JDBC java database connecivity java数据库互联
-ADO。net
-PDO php data object php访问数据库轻量级、一致性的接口。提供一个数据访问抽象层
-mysql的优势
+>     数据定义语言（DDL）：drop create alter
+>     数据操作语言（DML）：insert update delete 。。
+>     数据查询语言（DQL）：select
+>     数据控制语言（DCL）：grant revoke commit rollback。。
+#### 数据库访问接口
+>     * ODBC open database connectivity 开放数据库互联
+>     * JDBC java database connecivity java数据库互联
+>     * ADO。net
+>     * PDO php data object php访问数据库轻量级、一致性的接口。提供一个数据访问抽象层
+#### mysql的优势
 
-* 运行速度快
-* 免费
-* 容易使用
-* 可移植
-* 丰富的接口 c c++ eiffel java perl php python ruby tcl
-* 支持查询语言
-* 安全性和连接性
-mysql安装
+> * 运行速度快
+> * 免费
+> * 容易使用
+> * 可移植
+> * 丰富的接口 c c++ eiffel java perl php python ruby tcl
+> * 支持查询语言
+> * 安全性和连接性
+#### mysql安装
 
 下载tar包
 
-# rpm -ivh MySQL-server-5.7.16.rhel5.i386.rpm
-更改root用户密码
+>     # rpm -ivh MySQL-server-5.7.16.rhel5.i386.rpm
+#### 更改root用户密码
 
-# /usr/bin/mysqladmin -u root password 'new-passwd'
-删除测试数据库和匿名用户
+>     # /usr/bin/mysqladmin -u root password 'new-passwd'
+#### 删除测试数据库和匿名用户
 
-# /usr/bin/mysql_secure_installation 
-查看旧版本
+>      # /usr/bin/mysql_secure_installation 
+#### 查看旧版本
 
-# rpm -qa|grep -i mysql
-卸载mysql
+>      # rpm -qa|grep -i mysql
+#### 卸载mysql
 
-# rpm -ev mysql-version-4.e15_4.2
-查看数据库引擎
-# show engines;
-mysql引擎 Innodb,MyISAM,Memory,Merge,Archive,Federated,CSV,BLACKHOLE.
-Innodb存储引擎
-*支持事务，行级锁
-*是为处理巨大数据量的最大性能设计。
-*Innodb存储引擎完全与mysql服务器集合
-*支持外完整性约束
-*ibdata1,ib_logfile0\ib_logfile1
-MyISAM存储引擎
-*拥有较高的插入，查询速度，不支持事务
-*在支持大文件的文件系统和操作系统上支持大文件
-*当把删除更新和插入操作混合使用的时候，动态尺寸的行产生更少碎片。
-*每个myisam表最大索引数是64，可以通过编译来改变。每个索引最大列数是16
-*最大键长1000B。可以编译改变
-*BLOB和TEXT列可以被索引。
-*null值被允许在索引的列中。这个值占每个键0-1个字节
-*所有的数字键值以高字节优先被存储以允许一个更高的索引压缩。
-*每表一个auto_increment列的内部处理。myisam为insert和update操作自动更新这一列，序列值被删除之后就不能再用
-*可以把数据文件和索引文件放在不同目录
-*每个字符列可以有不同的字符集
-*有varchar的表可以固定或动态记录长度
-*varchar和char列可以多达64kB
-Memory存储引擎
-Memory将表中的数据存储到内存当中。为查询和引用其他表提供快速访问
+>      # rpm -ev mysql-version-4.e15_4.2
+#### 查看数据库引擎
+>      # show engines;
 
-* Memory表的每个表可以有多达32个索引。每个索引16列，以及500B的最大键长度
-* 执行hash和btree索引
-* 可以再memory长有非唯一键
-* 使用一个固定的记录长度格式
-* 不支持blob或text
-* 支持auto_increment列和对可包含null值的列的索引
-* 在索引客户端之间共享
-* 被存于内存中
-* 要释放内存 需要执行delete from 或truncate table 或drop table
-**如果只有insert和select操作，可以使用archive引擎，例如写日志
+> mysql引擎 Innodb,MyISAM,Memory,Merge,Archive,Federated,CSV,BLACKHOLE.
+
+#### Innodb存储引擎
+>     *支持事务，行级锁
+>     *是为处理巨大数据量的最大性能设计。
+>     *Innodb存储引擎完全与mysql服务器集合
+>     *支持外完整性约束
+>     *ibdata1,ib_logfile0\ib_logfile1
+#### MyISAM存储引擎
+>     *拥有较高的插入，查询速度，不支持事务
+>     *在支持大文件的文件系统和操作系统上支持大文件
+>     *当把删除更新和插入操作混合使用的时候，动态尺寸的行产生更少碎片。
+>     *每个myisam表最大索引数是64，可以通过编译来改变。每个索引最大列数是16
+>     *最大键长1000B。可以编译改变
+>     *BLOB和TEXT列可以被索引。
+>     *null值被允许在索引的列中。这个值占每个键0-1个字节
+>     *所有的数字键值以高字节优先被存储以允许一个更高的索引压缩。
+>     *每表一个auto_increment列的内部处理。myisam为insert和update操作自动更新这一列，序列值被删除之后就不能再用
+>     *可以把数据文件和索引文件放在不同目录
+>     *每个字符列可以有不同的字符集
+>     *有varchar的表可以固定或动态记录长度
+>     *varchar和char列可以多达64kB
+#### Memory存储引擎
+>Memory将表中的数据存储到内存当中。为查询和引用其他表提供快速访问
+
+> * Memory表的每个表可以有多达32个索引。每个索引16列，以及500B的最大键长度
+> * 执行hash和btree索引
+> * 可以再memory长有非唯一键
+> * 使用一个固定的记录长度格式
+> * 不支持blob或text
+> * 支持auto_increment列和对可包含null值的列的索引
+> * 在索引客户端之间共享
+> * 被存于内存中
+> * 要释放内存 需要执行delete from 或truncate table 或drop table
+
+**如果只有insert和select操作，可以使用archive引擎，例如写日志**
