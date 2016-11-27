@@ -221,6 +221,23 @@ create table tb_e1(
 >     # alter table t_name add col3 int(11) after name2;
 
 #### 删除字段
->     #
+>     # alter table t_name drop field_name;
+
+#### 修改字段排列位置
+>     # alter table t_name modify field_name1 type first|after field_name2
+
+#### 更改表的存储引擎
+>     # alter table t_name engine=MyISAM[Innodb,..];
+
+#### 删除表的外键约束
+>     # alter table t_name drop foreign key <foreign_key_name>;
+
+### 删除数据表
+>     # drop table [if exists] t1,t2,t3......;
+
+# 数据类型
+
+
+
 
 
