@@ -100,3 +100,51 @@
 > * 要释放内存 需要执行delete from 或truncate table 或drop table
 
 **如果只有insert和select操作，可以使用archive引擎，例如写日志**
+
+### 数据表的基本操作
+
+---
+> 创建数据表
+
+>      # create database db1;
+
+>      # use db1;
+
+#### 创建数据表
+
+>     # create table tb1(id int(11),name varchar(25) , did int(11),salary float);
+
+#### 主键约束 要求主键列的数据唯一，并且不允许为空。
+        主键分为单字段主键和多字段联合主键
+
+> 1.字段名 数据类型 primary key [默认值]
+```
+create table tb2(
+    id int(10) primary key,
+    name varchar(25),
+    deptid int(11),
+    salary float
+);
+```
+> 2.在定义完所有列之后指定主键 [constraint <约束名>] primary key [字段名]
+```
+create table tb3(
+    id int(11),
+    name varchar(25),
+    deptid int(11),
+    salary float,
+    primary key(id)
+);
+```
+> 3. 多字段联合主键
+
+        假设没有主键id，为了确定唯一的一个员工，可以用name，deptid联合做主键
+```
+create table tb4(
+    name varchar(25),
+    deptid int(11),
+    salary float,
+    primary key(name ,deptid)
+);
+```
+
