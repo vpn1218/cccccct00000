@@ -147,4 +147,80 @@ create table tb4(
     primary key(name ,deptid)
 );
 ```
+#### 使用外键约束
+>     创建外键约束的语法规则；
+
+> [constraint <外键名>] foreign key 字段名1[字段名2，...]
+
+> references <主表名> 主键列1,[主键列2.。。]
+
+>      外键名为定义的外键约束的名称，一个表中不能有相同名称的外键。
+
+>创建数据表 部门表 tb_d1
+```
+create table tb_d1(
+    id int(11) primary key,
+    name varchar(22) not null,
+    location varchar(50)
+);
+```
+> 定义员工表
+```
+create table tb_e1(
+    id int(11) primary key,
+    name varchar(25),
+    deptid int(11),
+    salary float,
+constraint fk_emp_dep1 foreign key(deptid) references tb_d1(id)
+);
+```
+#### 非空约束
+>  字段名 数据类型 not null
+
+#### 唯一性约束 unique constraint 
+> 字段名 数据类型 unique
+
+> constraint <约束名> unique(name)
+```
+create table tb_e1(
+    id int(11) primary key,
+    name varchar(22),
+    location varchar(50),
+    constraint sth unique(name)
+);
+```
+#### 默认约束
+> 字段名 数据类型 default 默认值
+
+#### 设置表属性自动增加
+> 字段名 数据类型 auto_increment 
+
+### 查看数据表结构
+>     # descibe table_name;
+>     # desc table_name;
+
+#### 查看详细结构语句
+>     # show create table table_name\G;
+
+### 修改数据表
+
+##### 修改表名
+>     # alter table table_name_o rename table_name_n;
+
+#### 修改字段数据类型
+>     # alter table t_name modify field_name 数据类型
+
+#### 修改字段名称
+>     # alter table t_name change field_name_o field_name_n ntype;
+
+#### 添加字段
+>     # alter table t_name add field_name_n type [after field_name_c| first];
+>     # alter table t_name add id2 int(10);
+>     # alter table t_name add name2 varchar(25) not null;
+>     # alter table t_name add col2 int(10) first;
+>     # alter table t_name add col3 int(11) after name2;
+
+#### 删除字段
+>     #
+
 
