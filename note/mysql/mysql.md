@@ -424,6 +424,44 @@ create table tb_e1(
 
 ### 字符串函数
 
+>     char_length(str) 返回str包含的字符个数，多字节字符算一个字符
+>     length(str) 字符串长度  utf8 一个汉字3个字节
+>     concat(s1,s2) 返回连接参数产生的字符串 select concat('my','sql');如果有一个参数是null，返回null。如果变量中有一个是二进制字符串，则结果是一个二进制字符串
+>     insert(s1,x,len,s2);
+>     lower(str),lcase(str),转换成小写字母
+>     upper(str),ucase(str),转换成大写字母
+>     left(s,n) 返回字符串s开始的最左边的n个字符。
+>     right(s,n) 返回字符串中最右边n个字符。
+>     lpad(s1,len,s2)返回字符串s1,len,s2填补到len字符串长度
+>     rpad(s1,len,s2)
+>     ltrim(s) 字符串左边的空格字符被删除
+>     rtrim(s) 字符串右边空格字符被删除
+>     trim(s from str) 删除字符串s中两端所有的子字符串s1.
+>     repeat(s,n); 返回一个由重复字符串s组成的字符串，字符串s的数目等于n，n<=0,返回一个空字符串，s或n为null，返回null。
+>     space(n) 返回一个由n个空格组成的字符串。
+>     replace(s,s1,s2);使用字符串s2替代字符串s中所有的字符串s1.
+>     strcmp(s1,s2) 相同返回0，第一参数小于第二 返回-1,其他情况返回1.
+>     substring(s,n,len) 从字符串s返回一个长度同len字符相同的子字符串，起始于位置n。
+>     mid(s,n,len) 与上相同
+>     locate(str1,str),position(str1 in str) inter(str,str1)3个函数作用相同，返回子字符串str1在字符串str中的开始位置。
+>     reverse(s) 将字符串s反转。
+>     elt(n,str1,str2,str3..strn),返回指定位置字符串的函数
+>     field(s,s1,s2)返回指定字符串位置的函数
+>     find_in_set(s1,s2) 返回字符串s1在字符串列表s2中出现的位置。字符串列表由逗号隔开。
+>     make_set(x,s1,s2)返回由x的二进制数指定的相应位的字符串组成的字符串。
+
+### 日期和时间函数
+
+>    curdate(),current_date(),curtime(),current_time()
+>    current_timestamp(),localtime(),now(),sysdate()
+>    unix_timestamp(date);没参数，返回unix时间戳
+>    from_unixtime(date);
+>    utc_date(),utc_time();
+>    month(date),monthname(date);
+>    dayname(date),dayofweek(date),weekday(date);
+>    week(date);weekofyear(date);
+>   dayofyear(d)  dayofmonth(d)
+>   year(date);quarter(date);minute(time);second(time);
 
 
 
