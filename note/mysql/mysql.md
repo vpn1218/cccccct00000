@@ -452,16 +452,54 @@ create table tb_e1(
 
 ### 日期和时间函数
 
->    curdate(),current_date(),curtime(),current_time()
->    current_timestamp(),localtime(),now(),sysdate()
->    unix_timestamp(date);没参数，返回unix时间戳
->    from_unixtime(date);
->    utc_date(),utc_time();
->    month(date),monthname(date);
->    dayname(date),dayofweek(date),weekday(date);
->    week(date);weekofyear(date);
->   dayofyear(d)  dayofmonth(d)
->   year(date);quarter(date);minute(time);second(time);
+>       curdate(),current_date(),curtime(),current_time()
+>       current_timestamp(),localtime(),now(),sysdate()
+>       unix_timestamp(date);没参数，返回unix时间戳
+>       from_unixtime(date);
+>       utc_date(),utc_time();
+>       month(date),monthname(date);
+>       dayname(date),dayofweek(date),weekday(date);
+>       week(date);weekofyear(date);
+>      dayofyear(d)  dayofmonth(d)
+>      year(date);quarter(date);minute(time);second(time);
+>      time_to_sec(time)   sec_to_time()
+
+>     date_add(),adddate(),date_sub(),subdate(),addtime(),subtime(),date_diff();
+>     date_format()
+
+
+### 条件判断函数
+
+>     条件判断函数也称为控制流程函数。 
+>     if(expr,v1,v2)函数, 如果expr是true 返回v1,否则返回v2
+>     ifnul(v1,v2) 假如v1不为null 返回v1，否则返回v2
+>     case expr when v1 then r1[when v2 then r2][else rn] end   如果expr值等于某个vn，则返回then后面对应的结果，与所有值都不相等，则返回else后面的rn。
+>     case when v1 then r1 [when v2 then r2] else rn] end
+
+### 系统信息函数
+
+>     version(); 版本号
+>     connection_id(); 当前用户的连接数
+>     show processlist;show full processlist;
+>     user(),current_user(),system_user(),session_user();获取用户名
+>     charset(str),获取变量的字符集；
+>     collation(str) ,获取字符的排列方式。
+>     last_insert_id() 当多条记录时，返回插入的第一行数据时产生的值
+
+### 加解密函数
+
+>     password(str) 计算并返回加密的字符串
+>     md5(str) 
+>     encode(str,pswd_str) 
+>     decode(crypt_str,pswd_str)解密
+
+
+### 其他函数
+
+>     格式化函数 format(x,n),将数字x格式化，并以四舍五入保留小数点后n位
+>     conv(n,from_base,to_base)进行不同进制间的转换。
+>     inet_aton(expr) ip地址与数字相互转换
+
 
 
 
