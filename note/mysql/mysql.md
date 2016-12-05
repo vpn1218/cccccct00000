@@ -501,6 +501,94 @@ create table tb_e1(
 >     inet_aton(expr) ip地址与数字相互转换
 
 
+# 查询数据
+
+### 基本查询语句
+```
+select 
+{* |<字段列表>}
+[
+    from tb1,tb2,tb3,...tbn
+    [where <exp1>]
+    [group by < group by definition>]
+    [having <expression> [{<operator> <expression>}]]
+    [order by <order by definition>]
+    [limit [offset,] <row count>]
+]
+select [字段1，字段2，字段3....]
+from[表或试图]
+where[查询条件];
+```
+
+### 单表查询
+
+#### 查询所有字段
+>     # select * from tb1;
+
+#### 查询指定字段
+>     # select f1,f2,f3 from tb1;
+
+#### 查询指定记录
+>     # select id,f1,f2 from tb1 where id <1;
+
+>     # select id,f1,f2 from tb1 where id in (1,2,3);
+>     # select id,f1,f2 from tb1 where id between 3 and 4;
+>     # select id,f1,f2 from tb1 where f1 like 'b%';
+>     # select id,f1,f2 from tb1 where f1 like '___b';
+
+#### 查询空值 
+>     # select id,f1,f2 from tb1 where f2 is null;
+
+#### 带and的多条件查询
+>     # select id,f1,f2,f3 from tb1 where f1=1 and f3=4;
+>     # select id,f1,f2,f3 from tb1 where f1>1 and f3<3 and f2=2;
+
+#### 带or的多条件查询
+>     # select id,f1,f2,f3 from tb1 where f3=2 or f2=1;
+>     # select id,f1,f2,f3 from tb1 where id in (3,5);
+
+#### 查询结果不重复
+>     # select distinct f1 from tb1;
+
+#### 对查询结果排序
+>     # select id ,f1,f2,f3,f4 from tb1 order by f4 desc<asc>;
+
+#### 分组查询
+>     分组查询是对数据按照某个或者多个字段进行分组。
+>     [group by 字段] [having <条件表达式>]
+>     group by 关键字通常和集合函数一起使用，例如max(),min(),count(),sum(),avg();
+
+>     # select bcid,count(*) as total from article group by bcid;
+
+>     # SELECT count(*) as total ,bcid from article GROUP BY bcid HAVING total >100;
+
+>     # SELECT count(*) as total ,bcid from wk_article GROUP BY bcid with ROLLUP HAVING total >100;
+
+>     # select * from article group by bcid,bprice;
+
+#### 使用limit 
+>     # select * from name limit 4;
+>     # select * from name limit 4,5;
+
+### 使用聚合函数查询
+> avg(),count(),max(),min(),sum();
+
+> select count(*) as sum from article;
+
+> select sum(q1) as qt from orderitems where o_num =1000;
+> select o_num,sum(q1) as qt from orderitems group by o_num;
+
+> select avg(f_price) as avg_price from fruits where s_id = 103;
+> select s_id,avg(f_price) as avg_price from fruits group by s_id;
+
+> select max(f_price) as max_price from fruits;
+> select s_id,max(f_price) as max_price from fruits group by s_id;
+
+> select min(f_price) as min_price from fruits;
+> select s_id,min(f_price) as min_price from fruits group by s_id;
+
+
+
 
 
 
