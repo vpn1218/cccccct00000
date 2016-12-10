@@ -33,10 +33,8 @@
 >     --with-imap \
 >     --with-kerberos \
 >     --with-imap-ssl \
->     --with-interbase \
 >     --enable-mbstring \
 >     --with-mcrypt \
->     --with-pdo-firebird \
 >     --with-zlib-dir \
 >     --enable-shmop \
 >     --enable-soap \
@@ -51,7 +49,6 @@
 >     --enable-sysvsem \
 >     --enable-sysvshm \
 >     --with-tidy \
->     --with-readline \
 >     --with-pdo-mysql=mysqlnd \
 >     --enable-embedded-mysqli \
 >     --with-mysqli=mysqlnd \
@@ -63,3 +60,9 @@
 >     --with-system-ciphers \
 >     --with-webp-dir \
 >     --with-pcre-jit \
+
+
+
+>     --with-readline \
+>     --with-pdo-firebird \
+>     --with-interbase \

@@ -1,5 +1,3 @@
-# nginx 安装
-``` 
 ./configure --help
 
   --help                             print this message
@@ -168,10 +166,11 @@
   --with-openssl-opt=OPTIONS         set additional build options for OpenSSL
 
   --with-debug                       enable debug logging
-```
-----------
 
->      # ./configure --prefix=/usr/local/nginx1115 \
+
+
+
+>      # ./configure --prefix=/usr/local/nginx1116 \
 >      --with-poll_module \
 >      --with-threads \
 >      --with-file-aio \
@@ -199,8 +198,6 @@
 >      --http-scgi-temp-path=/var/nginx/scgi \
 >      --with-pcre \
 >      --with-pcre-jit \
-
-
 >      --with-stream=dynamic \
 >      --with-stream_ssl_module \
 >      --with-stream_realip_module \
@@ -209,3 +206,5 @@
 >      --with-mail \
 >      --with-mail=dynamic \
 >      --with-http_geoip_module=dynamic \
+
+>     # yum -y install libxslt-devel openssl-devel pcre-devel gd-devel GeoIP-devel 
