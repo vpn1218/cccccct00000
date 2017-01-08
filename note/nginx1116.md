@@ -207,4 +207,19 @@
 >      --with-mail=dynamic \
 >      --with-http_geoip_module=dynamic \
 
->     # yum -y install libxslt-devel openssl-devel pcre-devel gd-devel GeoIP-devel 
+>     # yum -y install libxslt-devel openssl-devel pcre-devel gd-devel GeoIP-devel libatomic_ops-devel 
+
+
+
+
+
+
+
+
+
+./configure --prefix=/usr/local/web/nginx_1118 --with-select_module --with-poll_module --with-threads --with-file-aio --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_addition_module --with-http_xslt_module=dynamic --with-http_image_filter_module=dynamic --with-http_geoip_module=dynamic --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_auth_request_module --with-http_random_index_module --with-http_secure_link_module --with-http_degradation_module --with-http_slice_module --with-http_stub_status_module --with-mail=dynamic --with-mail_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-stream=dynamic --with-stream_ssl_module --with-stream_realip_module --with-stream_geoip_module=dynamic --with-stream_ssl_preread_module --with-google_perftools_module --with-compat --with-libatomic --http-client-body-temp-path=/var/run/nginx/client --http-proxy-temp-path=/var/run/nginx/proxy --http-fastcgi-temp-path=/var/run/nginx/fastcgi --http-uwsgi-temp-path=/var/run/nginx/uwsgi --http-scgi-temp-path=/var/run/nginx/scgi 
+
+
+
+
+
