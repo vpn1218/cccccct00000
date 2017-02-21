@@ -41,4 +41,16 @@
 >     chmod u,g,o,a    rwx    a
 
 
+*centos7 关闭防火墙*
+
+> 1、关闭防火墙：sudo systemctl stop firewalld.service
+> 2、关闭开机启动：sudo systemctl disable firewalld.service
+
+*默认命令行*
+
+> systemctl set-default multi-user.target   / graphical.target        
+
+*关闭selinux*
+
+>vi /etc/selinux/config
 
