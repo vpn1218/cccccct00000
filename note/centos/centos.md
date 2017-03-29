@@ -18,21 +18,21 @@
 
 >      d 为目录  - 则是文件    l为链接  b为块文件  c表示装置文件里面的串行设备，如键盘鼠标
 
-> 2345678910字符代表权限位
+ 2345678910字符代表权限位
 
-> 第二栏表示有多少档名链接到此节点
+ 第二栏表示有多少档名链接到此节点
 
-> 第三栏表示拥有者
+ 第三栏表示拥有者
 
-> 第四栏表示文件所属群组
+ 第四栏表示文件所属群组
 
-> 第五栏为这个文件的容量大小 默认为bytes
+ 第五栏为这个文件的容量大小 默认为bytes
 
-> 第六栏为这个文件的建档日期或者最近的修改日期
+第六栏为这个文件的建档日期或者最近的修改日期
 
 >     # ls -a --full-time  //显示完整的时间格式
 
-> 第七栏是文档的档名
+ 第七栏是文档的档名
 
 >     chgrp  /etc/group   改变群组
 >     chown  /etc/passwd  改变拥有者
@@ -41,4 +41,16 @@
 >     chmod u,g,o,a    rwx    a
 
 
+*centos7 关闭防火墙*
+
+> 1、关闭防火墙：sudo systemctl stop firewalld.service
+> 2、关闭开机启动：sudo systemctl disable firewalld.service
+
+*默认命令行*
+
+> systemctl set-default multi-user.target   / graphical.target        
+
+*关闭selinux*
+
+>vi /etc/selinux/config
 
