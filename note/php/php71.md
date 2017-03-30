@@ -33,10 +33,8 @@
 >     --with-imap \
 >     --with-kerberos \
 >     --with-imap-ssl \
->     --with-interbase \
 >     --enable-mbstring \
 >     --with-mcrypt \
->     --with-pdo-firebird \
 >     --with-zlib-dir \
 >     --enable-shmop \
 >     --enable-soap \
@@ -51,7 +49,6 @@
 >     --enable-sysvsem \
 >     --enable-sysvshm \
 >     --with-tidy \
->     --with-readline \
 >     --with-pdo-mysql=mysqlnd \
 >     --enable-embedded-mysqli \
 >     --with-mysqli=mysqlnd \
@@ -63,3 +60,55 @@
 >     --with-system-ciphers \
 >     --with-webp-dir \
 >     --with-pcre-jit \
+
+
+
+>     --with-readline \
+>     --with-pdo-firebird \
+>     --with-interbase \
+
+
+
+
+
+> yum -y install systemtap-sdt-devel libc-client-devel libmcrypt-devel libtidy-devel libacl-devel
+
+
+```
+git clone https://github.com/Jan-E/php7-ffmpeg ffmpeg 
+git clone https://github.com/krakjoe/ustring 
+git clone https://github.com/nikic/php-ast ast 
+git clone -b php7 https://github.com/phpredis/phpredis redis 
+git clone -b php7 https://github.com/msgpack/msgpack-php msgpack 
+git clone -b php7 https://github.com/johmue/php_excel excel 
+git clone -b PHP7 https://github.com/reeze/php-leveldb leveldb 
+git clone -b php7 https://github.com/Sean-Der/igbinary igbinary 
+git clone https://github.com/krakjoe/pthreads 
+git clone https://github.com/krakjoe/strict 
+svn co http://svn.php.net/repository/pecl/wincache/branches/WinCache_PHP7 wincache 
+git clone -b php7 https://github.com/laruence/taint 
+git clone https://github.com/xdebug/xdebug 
+git clone https://github.com/websupport-sk/pecl-memcache memcache 
+git clone https://github.com/krakjoe/apcu 
+git clone https://github.com/krakjoe/apcu-bc 
+git clone -b feature/php7 https://github.com/sqmk/pecl-jsmin.git jsmin 
+git clone -b seven git://git.php.net/pecl/tools/stomp 
+git clone https://github.com/php/pecl-networking-ssh2 ssh2 
+git clone https://github.com/php/pecl-mail-mailparse.git mailparse 
+git clone https://github.com/php/pecl-text-xdiff.git xdiff 
+git clone https://github.com/Sean-Der/pecl-math-stats.git stats 
+git clone https://github.com/Sean-Der/pecl-web_services-oauth.git oauth 
+git clone https://github.com/php/pecl-search_engine-solr.git solr 
+git clone -b php7 https://github.com/php/pecl-file_formats-haru.git haru 
+svn co http://svn.php.net/repository/pecl/dbase/trunk dbase 
+git clone https://github.com/m6w6/ext-propro.git propro 
+git clone https://github.com/m6w6/ext-raphf.git raphf 
+git clone https://github.com/m6w6/ext-http.git http 
+git clone https://github.com/esminis/php_pecl_judy judy 
+git clone https://github.com/esminis/php_pecl_spl_types spl_types 
+git clone https://github.com/esminis/php_pecl_id3 id3 
+git clone -b PhpNg https://github.com/esminis/php_pecl_rar.git rar 
+git clone https://github.com/esminis/php_pecl_bbcode bbcode 
+git clone https://github.com/esminis/php_pecl_rpmreader rpmreader 
+git clone https://github.com/phpv8/v8js.git
+```
